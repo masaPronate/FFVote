@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+</head>
+<body>
+<div id="store_select" class="page">
+    <div class="btArea">
+		<div class="bt st store_a" data-id="store_a"></div>
+		<div class="bt st store_b" data-id="store_b"></div>
+		<div class="bt st store_c" data-id="store_c"></div>
+		<div class="bt st store_d" data-id="store_d"></div>
+	</div><!-- store_select -->
+	<div class="selected_store hide"></div><!-- selected_store -->
+	<div class="reisyoku_len hide"></div><!-- reisyoku_len -->
+	<div class="ice_len hide"></div><!-- ice_len -->
+	<div class="enq_len hide"></div><!-- enq_len -->
+	<div class="chara_len hide"></div><!-- enq_len -->
+</div><!-- store_select -->
+<div id="start" class="page hide">
+<div class="bt rt"></div>
+<div class="bt st"></div>
+<div class="bt rn"></div>
+</div><!-- start -->
+<div id="ranking" class="page def hide">
+	<div class="r_ranking">
+		<div class="rank ranking01">
+			<div class="rank1 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank2 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank3 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank4 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank5 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+		</div><!-- rank ranking01 -->
+		<div class="rank ranking06 def hide">
+			<div class="rank6 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank7 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank8 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank9 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank10 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+		</div><!-- rank ranking06 -->
+	</div><!-- r_ranking -->
+	<div class="i_ranking def hide">
+		<div class="rank ranking01 def hide">
+			<div class="rank1 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank2 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank3 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank4 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank5 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->>
+		</div><!-- rank ranking01 -->
+		<div class="rank ranking06 def hide">
+			<div class="rank6 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank7 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank8 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank9 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+			<div class="rank10 rankDs"><div class="rank_name"></div><!-- rank_name --><div class="rank_maker"></div><!-- rank_maker" --><div class="rank_point"></div><!-- rank_point --></div><!-- rankDs -->
+		</div><!-- rank ranking06 -->
+	</div><!-- i_ranking -->
+	<div class="r1 bt"></div><!-- r1 bt -->
+	<div class="r6 bt"></div><!-- r6 bt -->
+	<div class="i1 bt"></div><!-- i1 bt -->
+	<div class="i6 bt"></div><!-- i6 bt -->
+	<div class="rt bt"></div><!-- rt bt -->
+</div><!-- ranking -->
+<div id="reisyoku_vote" class="page def hide">
+	<div class="fukidashi def hide">
+		<div class="text_area">
+			冷凍食品の番号の
+			<div class="big">1～<span class="reisyoku_max"></sapn></div>
+			から選んでね。
+		</div><!-- text_area -->
+	</div><!-- fukidashi -->
+	<div class="whiteboard def hide">
+		<div class="bt cancel def hide">戻る</div><!-- bt cancel -->
+	</div><!-- whiteboard -->
+	<div class="reisyoku_data def hide">
+	</div><!-- reisyoku_data -->
+	<div class="button agree"><img border="0" src="img/key/FF_tenkey_OK.png" alt=""></div>
+</div><!-- reisyoku_vote -->
+<div id="ice_vote" class="page def hide">
+	<div class="fukidashi def hide">
+		<div class="text_area">
+			アイスの番号の
+			<div class="big">101～<span class="ice_max"></sapn></div>
+			から選んでね。
+		</div><!-- text_area -->
+	</div><!-- fukidashi -->
+	<div class="whiteboard def hide">
+		<div class="bt cancel def hide">戻る</div><!-- bt cancel -->
+	</div><!-- whiteboard -->
+	<div class="ice_data def hide">
+	</div><!-- ice_data -->
+	<div class="button agree"><img border="0" src="img/key/FF_tenkey_OK.png" alt=""></div>
+</div><!-- ice_vote -->
+<div id="enq" class="page def hide e_1">
+	<div class="enq1">
+		<div class="question clear">
+			<div class="q_text">お客様の性別を教えてください。</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected" data-id="[1]男性">男性</div><!-- item -->
+			<div class="item unselected" data-id="[2]女性">女性</div><!-- item -->
+		</div><!-- answer -->
+	</div><!-- enq1 -->
+	<div class="enq2 def hide">
+		<div class="question clear">
+			<div class="q_text">お客様の年齢を教えてください。</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected baby" data-id="[1]～9さい">～9さい</div><!-- item -->
+			<div class="item unselected adult" data-id="[2]10代">10代</div><!-- item -->
+			<div class="item unselected adult" data-id="[3]20代">20代</div><!-- item -->
+			<div class="item unselected adult" data-id="[4]30代">30代</div><!-- item -->
+			<div class="item unselected adult" data-id="[5]40代">40代</div><!-- item -->
+			<div class="item unselected adult" data-id="[6]50代">50代</div><!-- item -->
+			<div class="item unselected adult" data-id="[7]60歳以上">60<span class="small">歳以上</span></div><!-- item -->
+		</div><!-- answer -->
+	</div><!-- enq2 -->
+	<div class="enq3 def hide">
+		<div class="question clear">
+			<div class="q_text">どんな時に冷凍食品をよく使いますか？<br>（複数回答可）</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected enq3_1" data-id="[1]朝食"data-name="enq3_1">朝食</div><!-- item -->
+			<div class="item unselected enq3_2" data-id="[2]昼食" data-name="enq3_2">昼食</div><!-- item -->
+			<div class="item unselected enq3_3" data-id="[3]夕食" data-name="enq3_3">夕食</div><!-- item -->
+			<div class="item unselected enq3_4" data-id="[4]お弁当" data-name="enq3_4">お弁当</div><!-- item -->
+			<div class="item unselected enq3_5" data-id="[5]おやつ" data-name="enq3_5">おやつ</div><!-- item -->
+			<div class="item unselected enq3_6" data-id="[6]夜食" data-name="enq3_6">夜食</div><!-- item -->
+		</div><!-- answer -->
+		<div class="enq3_1d data hide"></div><!-- enq3_1d -->
+		<div class="enq3_2d data hide"></div><!-- enq3_2d -->
+		<div class="enq3_3d data hide"></div><!-- enq3_3d-->
+		<div class="enq3_4d data hide"></div><!-- enq3_4d -->
+		<div class="enq3_5d data hide"></div><!-- enq3_5d -->
+		<div class="enq3_6d data hide"></div><!-- enq3_6d -->
+		<div class="agree def hide">OK</div><!-- agree -->
+	</div><!-- enq3 -->
+	<div class="enq4 def hide">
+		<div class="question clear">
+			<div class="q_text">（味以外で）冷凍食品を購入する時に<br>一番の決め手になることは何ですか？</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected" data-id="[1]国内製造品">国内製造品</div><!-- item -->
+			<div class="item unselected long_a" data-id="[2]塩分、カロリー等">塩分、<br>カロリー等</div><!-- item -->
+			<div class="item unselected" data-id="[3]量">量</div><!-- item -->
+			<div class="item unselected" data-id="[4]価格">価格</div><!-- item -->
+			<div class="item unselected" data-id="[5]ブランド">ブランド</div><!-- item -->
+		<div class="item unselected long_a" data-id="[6]原料表記があるなど">原料表記が<br>あるなど</div><!-- item -->
+		</div><!-- answer -->
+	</div><!-- enq4 -->
+	<div class="enq5 def hide">
+		<div class="question clear">
+			<div class="q_text">冷凍食品を購入するお店を選ぶ時に<br>一番の基準になることは何ですか？</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected" data-id="[1]品揃え">品揃え</div><!-- item -->
+			<div class="item unselected" data-id="[2]価格">価格</div><!-- item -->
+			<div class="item unselected" data-id="[3]家に近い">家に近い</div><!-- item -->
+			<div class="item unselected long_a" data-id="[4]ポイントがつく">ポイントが<br>つく</div><!-- item -->
+		</div><!-- answer -->
+	</div><!-- enq5 -->
+	<div class="enq6 def hide">
+		<div class="question clear">
+			<div class="q_text">冷凍食品はどこで購入しますか？<span class="small">（複数回答可）</span></div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer"></div><!-- answer -->
+		<div class="data_area"></div><!-- data_area -->
+		<div class="agree def hide">OK</div><!-- agree -->
+	</div><!-- enq6 -->
+	<div class="enqC1 def hide">
+		<div class="question clear">
+			<div class="q_text">どんなあじのアイスがすきですか？</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+			<div class="item unselected" data-id="[1]バニラ">バニラ</div><!-- item -->
+			<div class="item unselected" data-id="[2]チョコ">チョコ</div><!-- item -->
+			<div class="item unselected" data-id="[3]ストロベリー">ストロベリー</div><!-- item -->
+			<div class="item unselected long_a" data-id="[4]抹茶">抹茶<br>(まっちゃ)</div><!-- item -->
+			<div class="item unselected" data-id="[5]ソーダ">ソーダ</div><!-- item -->
+			<div class="item unselected" data-id="[6]そのほか">そのほか</div><!-- item -->
+		</div><!-- answer -->
+	</div><!-- enqC1 -->
+	<div class="enqC2 def hide">
+		<div class="question clear">
+			<div class="q_text">このなかでいちばんすきなキャラクターを<br>おしえてください</div><!-- q_text -->
+		</div><!-- question-->
+		<div class="answer" >
+		</div><!-- answer -->
+	</div><!-- enqC2 -->
+</div><!-- enq -->
+<div id="keyBoard" class="def hide">
+	<div class="num_display"></div>
+	<div class="tenKey_area">
+		<div class="button tenKey" data-id="1"><img border="0" src="img/key/FF_tenkey_1.png" alt=""></div>
+		<div class="button tenKey" data-id="2"><img border="0" src="img/key/FF_tenkey_2.png" alt=""></div>
+		<div class="button tenKey" data-id="3"><img border="0" src="img/key/FF_tenkey_3.png" alt=""></div>
+		<div class="button tenKey" data-id="4"><img border="0" src="img/key/FF_tenkey_4.png" alt=""></div>
+		<div class="button tenKey" data-id="5"><img border="0" src="img/key/FF_tenkey_5.png" alt=""></div>
+		<div class="button tenKey" data-id="6"><img border="0" src="img/key/FF_tenkey_6.png" alt=""></div>
+		<div class="button tenKey" data-id="7"><img border="0" src="img/key/FF_tenkey_7.png" alt=""></div>
+		<div class="button tenKey" data-id="8"><img border="0" src="img/key/FF_tenkey_8.png" alt=""></div>
+		<div class="button tenKey" data-id="9"><img border="0" src="img/key/FF_tenkey_9.png" alt=""></div>
+		<div class="button tenKey" data-id="C"><img border="0" src="img/key/FF_tenkey_C.png" alt=""></div>
+		<div class="button tenKey" data-id="0"><img border="0" src="img/key/FF_tenkey_0.png" alt=""></div>
+	</div>
+</div><!-- keyBoard -->
+<div id="wait" class="page def hide">
+	<div class="text">Now Loading...</div>
+	<img src="img/loading.gif" border="0" alt="">
+</div><!-- wait -->
+<div id="thx" class="page def hide">
+	<div class="btn"></div><!-- btn -->
+</div><!-- thx -->
+<div id="showTime" class="page def hide"></div><!-- showTime -->
+<div id="announce" class="page def hide">
+    <div class="lose def hide lose1">
+		<div class="ame"></div><!-- ame -->
+    </div><!-- lose -->
+	<div class="r_win def hide"></div><!-- r_win -->
+	<div class="i_win def hide"></div><!-- i_win -->
+</div><!-- announce -->
+<div id="reset" class="def hide"></div><!-- reset -->
+<div id="lock" class="def hide"></div><!-- lock -->
+	<input type="hidden" id="vote1" name="vote1" value="">
+	<input type="hidden" id="vote2" name="vote2" value="">
+	<input type="hidden" id="enq1" name="enq1" value="">
+	<input type="hidden" id="enq2" name="enq2" value="">
+	<input type="hidden" id="enq3" name="enq3" value="">
+	<input type="hidden" id="enq4" name="enq4" value="">
+	<input type="hidden" id="enq5" name="enq5" value="">
+	<input type="hidden" id="enq6" name="enq6" value="">
+	<input type="hidden" id="enqC1" name="enqC1" value="">
+	<input type="hidden" id="enqC2" name="enqC2" value="">
+	<input type="hidden" id="loto" name="loto" value="">
+	<audio src="mp3/lose.mp3" preload="auto" id="show_m"></audio>
+</body>
+</html>

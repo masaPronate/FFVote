@@ -1,0 +1,524 @@
+/* 共通 */
+body,html,#container {
+    margin: 0;
+	padding:0;
+}
+body {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	background-repeat: no-repeat;
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+#container {
+	position: relative;
+	margin:	0 auto;
+	max-width: 1024px;
+	max-height: 768px;
+	overflow: hidden;
+}
+.page {
+	position: relative;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	top: 0;
+}
+.hide {
+	display: none;
+}
+.clear::after {
+	content: "";
+	display:block;
+	clear: both;
+}
+.whiteboard,#lock {
+	width:1024px;
+	min-height: 768px;
+	background-size:contain;
+	position:fixed;
+	top:0;
+}
+#lock {
+	background-image: url('../img/lock.png');
+	z-index:100;
+}
+/* 店舗選択 */
+.btArea {
+	width: 1024px;
+	position:absolute;
+	top:75px;
+	
+}
+.btArea .bt {
+	text-align:center;
+	margin:	50px auto;
+	width: 500px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 0.4em; 
+	border: solid 4px  #000000;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+/* スタート */
+#start {
+	background-image: url('../img/start.png');
+	background-size:contain;
+}
+#start .bt.rt,#reset {
+	position:absolute;
+	min-width: 100px;
+	min-height: 100px;
+	top:0;
+	left:924px;
+	z-index:11;
+//	background-color:black;
+//	opacity:0.5;
+}
+#start .bt.st {
+	position:absolute;
+	min-width: 1024px;
+	min-height: 768px;
+	top:0;
+	left:0;
+	z-index:10;
+}
+#start .bt.rn {
+	position:absolute;
+	min-width:514px;
+	min-height: 94px;
+	top:535px;
+	left:475px;
+	z-index:11;
+//	background-color:black;
+//	opacity:0.5;
+}
+
+/* 結果速報 */
+#ranking .rank{
+	background-size:contain;
+	min-width: 1024px;
+	min-height: 768px;
+}
+.r_ranking .ranking01{
+	background-image: url('../img/r_rank01.png');
+}
+.r_ranking .ranking06{
+	background-image: url('../img/r_rank06.png');
+}
+.i_ranking .ranking01{
+	background-image: url('../img/i_rank01.png');
+}
+.i_ranking .ranking06{
+	background-image: url('../img/i_rank06.png');
+}
+#ranking .bt {
+	position:absolute;
+	min-width: 162px;
+	min-height: 120px;
+	top:574px;
+	z-index:10;
+//	background-color:black;
+//	opacity:0.5;
+}
+#ranking .bt.r1 {
+	left:72px;
+}
+#ranking .bt.r6 {
+	left:242px;
+}
+#ranking .bt.i1 {
+	left:412px;
+}
+#ranking .bt.i6 {
+	left:582px;
+}
+#ranking .bt.rt {
+	min-width: 210px;
+	left:754px;
+}
+.rank_name,.rank_maker,.rank_point {
+	position:absolute;
+	font-size:2em;
+	font-weight:bold;
+	color: #FFFFFF;
+}
+.rank_name,.rank_maker {
+	width: 600px;
+	height: 50px;
+	line-height:40px;
+	left: 190px;
+}
+.rank_maker,.rank_point {
+	text-align: right;
+}
+.rank_point {
+	width: 140px;
+	font-size: 4em;
+	left: 785px;
+}
+.rank1 .rank_name,.rank6 .rank_name {top:77px;}
+.rank1 .rank_maker,.rank6 .rank_maker {top:117px;}
+.rank1 .rank_point,.rank6 .rank_point {top: 68px;}
+.rank2 .rank_name,.rank7 .rank_name {top:177px;}
+.rank2 .rank_maker,.rank7 .rank_maker {top:217px;}
+.rank2 .rank_point,.rank7 .rank_point {top: 168px;}
+.rank3 .rank_name,.rank8 .rank_name {top:277px;}
+.rank3 .rank_maker,.rank8 .rank_maker {top:317px;}
+.rank3 .rank_point,.rank8 .rank_point {top: 268px;}
+.rank4 .rank_name,.rank9 .rank_name {top:377px;}
+.rank4 .rank_maker,.rank9 .rank_maker {top:417px;}
+.rank4 .rank_point,.rank9 .rank_point {top: 368px;}
+.rank5 .rank_name,.rank10 .rank_name {top:477px;}
+.rank5 .rank_maker,.rank10 .rank_maker {top:517px;}
+.rank5 .rank_point,.rank10 .rank_point {top: 468px;}
+
+/* 人気投票 */
+.num_display{
+	position:absolute;
+	width:418px;
+	top:32px;
+	text-align:center;
+	font-size:10em;
+	font-weight:bold;
+}
+#keyBoard{
+	position:absolute;
+	width:950px;
+	top:280px;
+	left:40px;
+}
+.button img{
+	width:130px;
+}
+.tenKey_area{
+	position:absolute;
+	width:450px;
+	top:27px;
+	left:498px;
+}
+.tenKey_area .tenKey{
+	float:left;
+	margin-left:10px;
+}
+.button.agree{
+	position:absolute;
+	top:613px;
+	left:828px;
+	z-index:45;
+}
+.keyTouch {
+	opacity: 0.4;
+}
+#reisyoku_vote {
+	background-image: url('../img/r_back.png');
+	background-size:contain;
+}
+#ice_vote {
+	background-image: url('../img/i_back.png');
+	background-size:contain;
+}
+.reisyoku_data,.ice_data {
+	position:absolute;
+	text-align:center;
+	top:200px;
+	left:32px;
+	width:950px;
+	min-height: 218px;
+	font-size:2em;
+	font-weight:bold;
+	background-color:#FFFFFF;
+	z-index:55;
+}
+
+.reisyoku_data .entry_no{
+	color:red;
+}
+.ice_data .entry_no{
+	color:blue;
+}
+.entry_no{
+	font-size:2.5em;
+}
+.item .name{
+	overflow:hidden;
+}
+.item .bt,.bt.cancel{
+	position:absolute;
+	width: 325px;
+	min-height: 75px;
+	line-height: 75px;
+	border-radius: 0.25em; 
+	border: solid 4px red;
+	color: #FFFFFF;
+	font-size:2em;
+	font-weight:bold;
+	background-color:red;
+}
+.item .bt.agree{
+	position: absolute;
+	top: 260px;
+	left: 560px;
+	z-index: 55;
+}
+.bt.cancel{
+	top: 460px;
+	left: 100px;
+	text-align: center;
+	font-size: 3.5em;
+	font-weight: bold;
+	background-color: blue;
+	border: blue;
+	z-index :55;
+}
+.whiteboard{
+	z-index:50;
+}
+#reisyoku_vote .whiteboard{
+	background-image: url('../img/r_board.png');
+}
+#ice_vote .whiteboard{
+	background-image: url('../img/i_board.png');
+}
+.fukidashi{
+	width: 411px;
+	min-height: 278.5px;
+	position:absolute;
+	top: 350px;
+	left: 50px;
+	z-index:100;
+	text-align:center;
+	font-size:2em;
+	font-weight:bold;
+	background-image: url('../img/fukidashi.png');
+	background-size:contain;
+}
+.fukidashi .text_area{
+	margin-top:27px;
+	margin-left:10px;
+}
+.fukidashi .big{
+	font-size:2em;
+}
+/* アンケート */
+.e_1{
+	background-image: url('../img/e1_back.png');
+	background-size:contain;
+}
+.e_2{
+	background-image: url('../img/e2_back.png');
+	background-size:contain;
+}
+.e_3{
+	background-image: url('../img/e3_back.png');
+	background-size:contain;
+}
+.e_4{
+	background-image: url('../img/e4_back.png');
+	background-size:contain;
+}
+.e_5{
+	background-image: url('../img/e5_back.png');
+	background-size:contain;
+}
+.e_C1{
+	background-image: url('../img/eC1_back.png');
+	background-size:contain;
+}
+.e_C2{
+	background-image: url('../img/eC2_back.png');
+	background-size:contain;
+}
+.question{
+	margin-bottom:5px;
+}
+.q_text{
+	margin-left:50px;
+	font-size:3em;
+	font-weight:bold;
+}
+.answer{
+	width:974px;
+	margin-left:50px;
+}
+.unselected{
+	border: solid 10px #d3d3d3;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.selected{
+	border: solid 10px #d3d3d3;
+	background-color: #d3d3d3;
+	color: #FFFFFF;
+}
+.answer .item{
+	float:left;
+	border-radius: 0.25em; 
+	text-align:center;
+	font-size:3em;
+	font-weight:bold;
+}
+.enq1,.enq3,.enq4,.enq5,.enq6,.enqC1,.enqC2{
+	position:absolute;
+	top: 170px;
+}
+.enq1 .item{
+	margin:	10px 25px;
+	width: 300px;
+	height: 80px;
+	line-height: 80px;
+}
+.enq2{
+	position:absolute;
+	top: 410px;
+}
+.enq2 .item {
+	margin:	10px 10px 15px;
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+}
+.enq2 .small,.enq6 .small{
+	font-size: 0.6em;
+}
+.enq3 .item,.enq4 .item, .enq5 .item{
+	margin:	10px 10px 15px;
+	width: 270px;
+	height: 100px;
+	line-height: 100px;
+}
+.enq4 .long_a,.enq5 .long_a{
+	height: 100px;
+	line-height: 50px;
+	font-size: 2.5em;
+}
+.enq6 .item{
+	margin:	10px 10px 15px;
+	width: 200px;
+	height: 80px;
+	line-height: 80px;
+	font-size:2em;
+}
+.enq6 .long_a{
+	line-height: 40px;
+	font-size:1.4em;
+}
+.enqC1 .item{
+	margin:	10px 10px 15px;
+	width: 270px;
+	height: 100px;
+	line-height: 100px;
+}
+.enqC1 .long_a{
+	line-height: 50px;
+	font-size: 2.5em;
+}
+.enqC2 .item{
+	margin:	15px 15px;
+	min-width: 200px;
+	min-height: 300px;
+}
+.mini{
+	margin:	30px 15px;
+	min-width: 150px;
+	min-height: 225px;
+}
+#enq .agree {
+	position:absolute;
+	top: 470px;
+	left: 212px;
+	width: 600px;
+	min-height: 75px;
+	line-height: 75px;
+	border-radius: 0.25em; 
+	border: solid 4px #000000;
+	text-align: center;
+	color: #FFFFFF;
+	font-size:3em;
+	font-weight:bold;
+	background-color:#000000;
+}
+.C1{background-image: url('../img/child/C01.png');background-size:contain;}
+.C2{background-image: url('../img/child/C02.png');background-size:contain;}
+.C3{background-image: url('../img/child/C03.png');background-size:contain;}
+.C4{background-image: url('../img/child/C04.png');background-size:contain;}
+.C5{background-image: url('../img/child/C05.png');background-size:contain;}
+.C6{background-image: url('../img/child/C06.png');background-size:contain;}
+.C7{background-image: url('../img/child/C07.png');background-size:contain;}
+.C8{background-image: url('../img/child/C08.png');background-size:contain;}
+.C9{background-image: url('../img/child/C09.png');background-size:contain;}
+.C10{background-image: url('../img/child/C10.png');background-size:contain;}
+
+/* お待ちください */
+#wait{
+	background-color: #7fffd4;
+	font-size:6em;
+	font-weight:bold;
+}
+#wait .text{
+	position:absolute;
+	left:125px;
+	top:250px;
+}
+#wait img{
+	position:absolute;
+	left:450px;
+	top:500px;
+}
+
+/* 抽選開始 */
+.thx1{background-image: url('../img/thx_back/thx1.png');background-size:contain;}
+.thx2{background-image: url('../img/thx_back/thx2.png');background-size:contain;}
+.thx3{background-image: url('../img/thx_back/thx3.png');background-size:contain;}
+.thx4{background-image: url('../img/thx_back/thx4.png');background-size:contain;}
+.thx5{background-image: url('../img/thx_back/thx5.png');background-size:contain;}
+.thx6{background-image: url('../img/thx_back/thx6.png');background-size:contain;}
+#thx .btn{
+	position:absolute;
+	min-width:950px;
+	min-height:425px;
+	left:38px;
+	top:270px;
+//	background-color:black;
+//	opacity:0.5;
+}
+
+/* 抽選中 */
+#showTime{
+	background-image: url('../img/showtime.gif');
+	background-size:contain;
+}
+
+/* ハズレ */
+.lose,.r_win,.i_win{
+	position:absolute;
+	min-width:1024px;
+	min-height:768px;
+}
+.lose1{background-image: url('../img/lose_back/lose1.png');background-size:contain;}
+.lose2{background-image: url('../img/lose_back/lose2.png');background-size:contain;}
+.lose3{background-image: url('../img/lose_back/lose3.png');background-size:contain;}
+.lose4{background-image: url('../img/lose_back/lose4.png');background-size:contain;}
+.lose5{background-image: url('../img/lose_back/lose5.png');background-size:contain;}
+.lose6{background-image: url('../img/lose_back/lose6.png');background-size:contain;}
+.lose7{background-image: url('../img/lose_back/lose7.png');background-size:contain;}
+.lose8{background-image: url('../img/lose_back/lose8.png');background-size:contain;}
+.lose9{background-image: url('../img/lose_back/lose9.png');background-size:contain;}
+
+.ame{
+	background-image: url('../img/lose_back/ame.png');
+	background-repeat: no-repeat;
+	background-size:contain;
+	position:absolute;
+	min-width:949px;
+	min-height:209px;
+	left:10px;
+	top:200px;
+}
+
+
+
+/* アタリ */
+.r_win{background-image: url('../img/r_win.png');background-size:contain;}
+.i_win{background-image: url('../img/i_win.png');background-size:contain;}
