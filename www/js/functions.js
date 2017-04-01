@@ -181,12 +181,6 @@ $(function(){
 	enq_query2('enq6','.enq6,#enq','#wait','e_5','e_1'); //アンケート6
 	$('.enq6 .agree').on(touchstart,function() { //アンケート6追加
 		loto(lotoUrl);
-		setTimeout(function(){
-
-		},1000);
-        setTimeout(function(){
-			toggleScr('#wait,#reset','#thx');
-		},2000);
 	});
 	enq_query('enqC1','.enqC1','.enqC2','e_C1','e_C2'); //子ども用アンケート1
 	enq_query('enqC2','.enqC2,#enq','#wait','e_C2','e_1'); //子ども用アンケート2
@@ -196,9 +190,6 @@ $(function(){
 		$(".lose").removeClass('hide');
 		$("audio#show_m").attr("src","mp3/lose.mp3");
 		send(voteUrl);
-		setTimeout(function(){
-			toggleScr('#wait,#reset','#thx');
-		},2000);
 	});
 });
 
@@ -379,11 +370,11 @@ function charaData(enq_cUrl) { //キャラクターデータの読み込み
 	    for(var i=0; i < len; i++){
 			var no = parseInt(i + 1),d_no = data[i].no, name = "[" + no +"]" + data[i].name;
 			$(".enqC2 .answer").append(
-				'<div class="item C' + d_no + '" data-id="' + name + '"></div>'
+				'<div class="item C' + d_no + ' large" data-id="' + name + '"></div>'
 			);
     	}
-		if(parseInt(len) > 5){
-			$('.enqC2 .item').addClass("mini");
+		if(parseInt(len) > 4){
+			$('.enqC2 .item').removeClass("large").addClass("mini");
 		}
 	})
 	.fail(function() {
@@ -521,6 +512,9 @@ function send(voteUrl) { //投票・アンケートデータの送信
 			alert(OK);
 		}
 		randomBack(6,'#thx','thx');
+        setTimeout(function(){
+			toggleScr('#wait,#reset','#thx');
+		},2000);
 	})
 	.fail(function(XMLHttpRequest, textStatus, errorThrown) {
 		alert('データの送信に失敗しました。通信環境をチェックししてください。');
@@ -648,6 +642,6 @@ function ame() { //残念賞のアニメーション
 	}, time).animate({
 		left:"-=50px",
 		top:"-=50px"
-	}, time)
+	}, time);
     setTimeout("ame()",time*8);  
 }
